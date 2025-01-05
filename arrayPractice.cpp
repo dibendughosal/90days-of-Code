@@ -1,7 +1,7 @@
 // // // Create an Integer Array (Student) with size of 56
-// #include<bits/stdc++.h>
-// #include<cstring>
-// using namespace std;
+#include<bits/stdc++.h>
+#include<cstring>
+using namespace std;
 // // int main(){
 // //     int student_marks[56]={99,94,92,79,86};
 // //     for (int i = 0; i < 5; i++)
@@ -27,7 +27,7 @@
     
     
 
-// int main(){
+int main(){
 //     // int arr[5]= {1,2,3,4,5};
     // memset(arr, 0,sizeof(arr)); //replace value by 0 using memset function
 //     // for (int i = 0; i < 5; i++)
@@ -83,5 +83,46 @@
 //     // {
 //     //     cout<<"absent";
 //     // }
-// }
+cout<<"Enter the size of an array - ";
+int n;
+cin>>n;
+int arr[n];
+cout<<"Enter The element of an array: "<<endl;
+for (int i = 0; i < n; i++)
+{
+    cin>>arr[i];
+}
+string minmax;
+cout<<"To find out Min or Max :- ";
+cin>>minmax;
+
+if (minmax == "Max")
+{
+    int max=INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+        
+    }
+    cout<<"The Maximum is "<<max<<endl;
+}
+if(minmax == "Min"){
+    int min = INT_MAX;
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+        
+    }
+    cout<<"The Minimum Is "<<min<<endl;
+    
+}
+
+
+}
 
